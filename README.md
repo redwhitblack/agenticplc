@@ -14,4 +14,4 @@ The Clerk streams from SpaceXAI (`https://api.x.ai/v1`, `grok-4.6`) when `XAI_AP
 
 ## Production
 
-DigitalOcean App Platform. Domain: agenticplc.com.
+Cloudflare Pages (free). Domain: agenticplc.com. Build: `npm run build`. Output: `out`. Functions in `/functions`.
