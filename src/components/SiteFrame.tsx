@@ -46,17 +46,19 @@ export function SiteFrame({ children }: { children: React.ReactNode }) {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
           <Logo />
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
-            {nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`mono text-[11px] tracking-[0.2em] uppercase transition-colors ${
-                  pathname === item.href ? "text-signal" : "text-fog hover:text-ivory"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {nav
+              .filter((item) => item.href !== "/capital")
+              .map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`mono text-[11px] tracking-[0.2em] uppercase transition-colors ${
+                    pathname === item.href ? "text-signal" : "text-fog hover:text-ivory"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
             <Link href="/capital" className="btn btn-primary">
               Capital
             </Link>
